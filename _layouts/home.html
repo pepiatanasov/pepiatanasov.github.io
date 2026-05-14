@@ -11,9 +11,16 @@ layout: default
 
 <main class="home">
   <ul class="trace-list">
-    {% for trace in site.traces %}
+    {% assign traces = site.traces | sort: 'date' | reverse %}
+    {% for trace in traces %}
       <li class="trace-item">
         <a href="{{ trace.url | relative_url }}">{{ trace.title }}</a>
+        {% if trace.date %}
+          <p class="trace-date">{{ trace.date | date: "%d %b %Y" }}</p>
+        {% endif %}
+        {% if trace.excerpt %}
+          <p class="trace-excerpt">{{ trace.excerpt }}</p>
+        {% endif %}
         {% if trace.tags and trace.tags.size > 0 %}
           <div class="tag-row">
             {% for tag in trace.tags %}

@@ -134,6 +134,20 @@ h1 {
   font-size: clamp(1.9rem, 7vw, 2.8rem);
 }
 
+.trace-date {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.trace-excerpt {
+  max-width: 42rem;
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
 .trace-body h2 {
   margin-top: 1.5rem;
 }
