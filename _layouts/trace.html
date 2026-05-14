@@ -1,0 +1,25 @@
+---
+layout: default
+page_shell_class: page-shell--entry
+---
+<main class="entry-shell">
+  <a class="back-link" href="{{ '/' | relative_url }}">Back to atelier</a>
+
+  <article>
+    <header class="entry-header">
+      <p class="site-name">{{ site.title }}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.tags and page.tags.size > 0 %}
+        <div class="tag-row">
+          {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </header>
+
+    <div class="trace-body">
+      {{ content }}
+    </div>
+  </article>
+</main>

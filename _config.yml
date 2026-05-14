@@ -1,0 +1,21 @@
+title: Digital Atelier
+description: A free-form space for public thinking across code, research, philosophy, and the constellations between them.
+timezone: Europe/Sofia
+markdown: kramdown
+permalink: pretty
+
+collections:
+  traces:
+    output: true
+    permalink: /traces/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: traces
+    values:
+      layout: trace

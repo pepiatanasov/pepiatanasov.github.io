@@ -1,0 +1,24 @@
+---
+layout: default
+---
+<header class="site-header">
+  <p class="site-name">{{ site.title }}</p>
+  <h1>{{ site.title }}</h1>
+</header>
+
+<main class="home">
+  <ul class="trace-list">
+    {% for trace in site.traces %}
+      <li class="trace-item">
+        <a href="{{ trace.url | relative_url }}">{{ trace.title }}</a>
+        {% if trace.tags and trace.tags.size > 0 %}
+          <div class="tag-row">
+            {% for tag in trace.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</main>
