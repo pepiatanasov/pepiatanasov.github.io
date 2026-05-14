@@ -54,6 +54,21 @@ code {
   letter-spacing: 0.08em;
 }
 
+.site-link {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.site-link a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.site-link a:hover,
+.site-link a:focus-visible {
+  text-decoration: underline;
+}
+
 h1,
 h2 {
   margin: 0 0 1rem;
@@ -67,6 +82,12 @@ h1 {
 
 .trace-body p,
 .trace-list {
+  color: var(--muted);
+}
+
+.site-description {
+  max-width: 36rem;
+  margin: -0.25rem 0 0;
   color: var(--muted);
 }
 
