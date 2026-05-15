@@ -1,4 +1,34 @@
 ---
-layout: home
-title: Digital Atelier
+layout: default
 ---
+<header class="site-header">
+  <p class="site-link">
+    <a href="https://github.com/pepiatanasov">https://github.com/pepiatanasov</a>
+  </p>
+  <h1>{{ site.title }}</h1>
+  <p class="site-description">{{ site.description }}</p>
+</header>
+
+<main class="home">
+  <ul class="trace-list">
+    {% assign traces = site.traces | where_exp: "item", "item.published != false" | sort: 'date' | reverse %}
+    {% for trace in traces %}
+      <li class="trace-item">
+        <a href="{{ trace.url | relative_url }}">{{ trace.title }}</a>
+        {% if trace.date %}
+          <p class="trace-date">{{ trace.date | date: "%d %b %Y" }}</p>
+        {% endif %}
+        {% if trace.excerpt %}
+          <p class="trace-excerpt">{{ trace.excerpt }}</p>
+        {% endif %}
+        {% if trace.tags and trace.tags.size > 0 %}
+          <div class="tag-row">
+            {% for tag in trace.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</main>

@@ -4,6 +4,9 @@ timezone: Europe/Sofia
 markdown: kramdown
 permalink: pretty
 
+exclude:
+  - README.md
+
 collections:
   traces:
     output: true
