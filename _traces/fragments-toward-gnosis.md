@@ -7,6 +7,7 @@ tags:
   - mathematics
   - patterns
   - morphogenesis
+  - thinking-with-ai
 ---
 
 This essay begins not from a theorem, but from an expression.

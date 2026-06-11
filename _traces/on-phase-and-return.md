@@ -7,6 +7,7 @@ tags:
   - mathematics
   - recurrence
   - traces
+  - thinking-with-ai
 ---
 
 The first trace placed proportion beside rotation. This one follows the
